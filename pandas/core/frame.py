@@ -1380,6 +1380,7 @@ class DataFrame(NDFrame):
 
         Examples
         --------
+        >>> from pandas.io.stata import StataWriter
         >>> writer = StataWriter('./data_file.dta', data)
         >>> writer.write_file()
 
