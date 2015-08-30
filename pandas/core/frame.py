@@ -1380,13 +1380,16 @@ class DataFrame(NDFrame):
 
         Examples
         --------
+        >>> import pandas as pd
         >>> from pandas.io.stata import StataWriter
+        >>> data = pd.DataFrame([[1.0, 1]], columns=['a', 'b'])
         >>> writer = StataWriter('./data_file.dta', data)
         >>> writer.write_file()
 
         Or with dates
-
-        >>> writer = StataWriter('./date_data_file.dta', data, {2 : 'tw'})
+        >>> from datetime import datetime
+        >>> data = pd.DataFrame([[datetime(2000,1,1)]], columns=['date'])
+        >>> writer = StataWriter('./date_data_file.dta', data, {'date' : 'tw'})
         >>> writer.write_file()
         """
         from pandas.io.stata import StataWriter
