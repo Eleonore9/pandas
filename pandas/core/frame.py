@@ -3753,7 +3753,6 @@ class DataFrame(NDFrame):
         two  a   3
              b   4
         dtype: float64
-
         >>> s.unstack(level=-1)
              a   b
         one  1  2
