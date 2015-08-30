@@ -3743,6 +3743,7 @@ class DataFrame(NDFrame):
 
         Examples
         --------
+        >>> import pandas as pd
         >>> index = pd.MultiIndex.from_tuples([('one', 'a'), ('one', 'b'),
         ...                                    ('two', 'a'), ('two', 'b')])
         >>> s = pd.Series(np.arange(1.0, 5.0), index=index)
